@@ -18,7 +18,7 @@ const PropertyCard = ({ property }) => {
   return (
     <div className='rounded-xl shadow-md relative'>
       <Image
-        src={`/images/properties/${property.images[0]}`}
+        src={property.images[0]}
         alt=''
         height={0}
         width={0}
@@ -36,8 +36,7 @@ const PropertyCard = ({ property }) => {
 
         <div className='flex justify-center gap-4 text-gray-500 mb-4'>
           <p>
-            <FaBed className='inline mr-2' /> {property.beds}{' '}
-            <span className='md:hidden lg:inline'>Beds</span>
+            <FaBed className='inline mr-2' /> {property.beds} <span className='md:hidden lg:inline'>Beds</span>
           </p>
           <p>
             <FaBath className='inline mr-2' />

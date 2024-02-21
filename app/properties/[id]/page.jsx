@@ -1,6 +1,8 @@
 'use client';
+
 import PropertyDetails from '@/components/PropertyDetails';
 import PropertyHeaderImage from '@/components/PropertyHeaderImage';
+import PropertyImages from '@/components/PropertyImages';
 import Spinner from '@/components/Spinner';
 import { fetchProperty } from '@/utils/requests';
 import Link from 'next/link';
@@ -44,10 +46,7 @@ const PropertyPage = () => {
           <PropertyHeaderImage image={property.images[0]} />
           <section>
             <div className='container m-auto py-6 px-6'>
-              <Link
-                href='/properties'
-                className='text-blue-500 hover:text-blue-600 flex items-center'
-              >
+              <Link href='/properties' className='text-blue-500 hover:text-blue-600 flex items-center'>
                 <FaArrowLeft className='mr-2' /> Back to Properties
               </Link>
             </div>
@@ -70,10 +69,7 @@ const PropertyPage = () => {
                     <h3 className='text-xl font-bold mb-6'>Contact Property Manager</h3>
                     <form>
                       <div className='mb-4'>
-                        <label
-                          className='block text-gray-700 text-sm font-bold mb-2'
-                          htmlFor='name'
-                        >
+                        <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='name'>
                           Name:
                         </label>
                         <input
@@ -85,10 +81,7 @@ const PropertyPage = () => {
                         />
                       </div>
                       <div className='mb-4'>
-                        <label
-                          className='block text-gray-700 text-sm font-bold mb-2'
-                          htmlFor='email'
-                        >
+                        <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='email'>
                           Email:
                         </label>
                         <input
@@ -100,10 +93,7 @@ const PropertyPage = () => {
                         />
                       </div>
                       <div className='mb-4'>
-                        <label
-                          className='block text-gray-700 text-sm font-bold mb-2'
-                          htmlFor='phone'
-                        >
+                        <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='phone'>
                           Phone:
                         </label>
                         <input
@@ -114,10 +104,7 @@ const PropertyPage = () => {
                         />
                       </div>
                       <div className='mb-4'>
-                        <label
-                          className='block text-gray-700 text-sm font-bold mb-2'
-                          htmlFor='message'
-                        >
+                        <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='message'>
                           Message:
                         </label>
                         <textarea
@@ -140,6 +127,7 @@ const PropertyPage = () => {
               </div>
             </div>
           </section>
+          <PropertyImages images={property.images} />
         </>
       )}
     </>
