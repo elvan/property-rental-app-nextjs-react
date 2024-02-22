@@ -5,27 +5,27 @@ import { useEffect, useState } from 'react';
 const PropertyAddForm = () => {
   const [mounted, setMounted] = useState(false);
   const [fields, setFields] = useState({
-    type: 'Apartment',
-    name: 'Test Property',
+    type: '',
+    name: '',
     description: '',
     location: {
       street: '',
-      city: 'Test City',
-      state: 'Test State',
+      city: '',
+      state: '',
       zipcode: '',
     },
-    beds: '3',
-    baths: '2',
-    square_feet: '1800',
+    beds: '',
+    baths: '',
+    square_feet: '',
     amenities: [],
     rates: {
       weekly: '',
-      monthly: '2000',
+      monthly: '',
       nightly: '',
     },
     seller_info: {
       name: '',
-      email: 'test@test.com',
+      email: '',
       phone: '',
     },
     images: [],
@@ -57,7 +57,6 @@ const PropertyAddForm = () => {
       }));
     }
   };
-
   const handleAmenitiesChange = (e) => {
     const { value, checked } = e.target;
 
