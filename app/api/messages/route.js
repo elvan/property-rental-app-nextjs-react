@@ -58,7 +58,9 @@ export const POST = async (request) => {
       email,
       phone,
       body: message,
+      read: false,
     });
+    console.log(newMessage);
 
     await newMessage.save();
 
