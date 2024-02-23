@@ -1,5 +1,53 @@
 # PropertyRental
 
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20092453.png)
+
+---
+
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20092518.png)
+
+---
+
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20092545.png)
+
+---
+
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20092756.png)
+
+---
+
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20092832.png)
+
+---
+
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20092849.png)
+
+---
+
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20092902.png)
+
+---
+
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20092918.png)
+
+---
+
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20093113.png)
+
+---
+
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20093157.png)
+
+---
+
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20093234.png)
+
+---
+
+![Screenshot](https://raw.githubusercontent.com/elvan/property-rental-app-nextjs-react/main/_screenshots_/Screenshot%202024-02-23%20093252.png)
+
+---
+
 ## Description
 
 PropertyRental is a comprehensive real estate platform designed to bridge the gap between property owners and potential renters or buyers. This project provides a robust solution for users to explore, bookmark, and inquire about properties with ease. By integrating modern web technologies, PropertyRental enhances the property search experience with features like dynamic property listings, interactive maps, and social media sharing capabilities. The platform aims to simplify the process of finding or listing properties by offering a user-friendly interface and a set of interactive tools.
