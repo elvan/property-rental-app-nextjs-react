@@ -89,7 +89,7 @@ export const POST = async (request) => {
 
       // Make request to upload to Cloudinary
       const result = await cloudinary.uploader.upload(`data:image/png;base64,${imageBase64}`, {
-        folder: 'propertypulse',
+        folder: 'PropertyRental',
       });
 
       imageUploadPromises.push(result.secure_url);
