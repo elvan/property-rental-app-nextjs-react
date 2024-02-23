@@ -8,9 +8,20 @@ export const GET = async (request) => {
   try {
     await connectDB();
 
-    const properties = await Property.find({});
+    const page = request.nextUrl.searchParams.get('page') || 1;
+    const pageSize = request.nextUrl.searchParams.get('pageSize') || 6;
 
-    return new Response(JSON.stringify(properties), {
+    const skip = (page - 1) * pageSize;
+
+    const total = await Property.countDocuments({});
+    const properties = await Property.find({}).skip(skip).limit(pageSize);
+
+    const result = {
+      total,
+      properties,
+    };
+
+    return new Response(JSON.stringify(result), {
       status: 200,
     });
   } catch (error) {
@@ -55,7 +66,7 @@ export const POST = async (request) => {
       rates: {
         weekly: formData.get('rates.weekly'),
         monthly: formData.get('rates.monthly'),
-        nightly: formData.get('rates.nightly'),
+        nightly: formData.get('rates.nightly.'),
       },
       seller_info: {
         name: formData.get('seller_info.name'),
@@ -78,7 +89,7 @@ export const POST = async (request) => {
 
       // Make request to upload to Cloudinary
       const result = await cloudinary.uploader.upload(`data:image/png;base64,${imageBase64}`, {
-        folder: 'PropertyRental',
+        folder: 'propertypulse',
       });
 
       imageUploadPromises.push(result.secure_url);

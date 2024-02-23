@@ -3,9 +3,9 @@ import { fetchProperties } from '@/utils/requests';
 import Link from 'next/link';
 
 const HomeProperties = async () => {
-  const properties = await fetchProperties();
+  const data = await fetchProperties();
 
-  const recentProperties = properties.sort(() => Math.random() - Math.random()).slice(0, 3);
+  const recentProperties = data.properties.sort(() => Math.random() - Math.random()).slice(0, 3);
 
   return (
     <>
@@ -16,9 +16,7 @@ const HomeProperties = async () => {
             {recentProperties === 0 ? (
               <p>No Properties Found</p>
             ) : (
-              recentProperties.map((property) => (
-                <PropertyCard key={property._id} property={property} />
-              ))
+              recentProperties.map((property) => <PropertyCard key={property._id} property={property} />)
             )}
           </div>
         </div>
