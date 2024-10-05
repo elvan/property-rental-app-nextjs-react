@@ -3,22 +3,9 @@
 import addMessage from '@/app/actions/addMessage';
 import { useSession } from 'next-auth/react';
 import { useEffect } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
-import { FaPaperPlane } from 'react-icons/fa';
+import { useFormState } from 'react-dom';
 import { toast } from 'react-toastify';
-
-const SubmitMessageButton = () => {
-  const status = useFormStatus();
-  return (
-    <button
-      className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline flex items-center justify-center'
-      type='submit'
-    >
-      <FaPaperPlane className='mr-2' />{' '}
-      {status.pending ? 'Sending...' : 'Send Message'}
-    </button>
-  );
-};
+import SubmitMessageButton from './SubmitMessageButton';
 
 const PropertyContactForm = ({ property }) => {
   const { data: session } = useSession();
